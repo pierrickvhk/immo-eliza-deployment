@@ -1,0 +1,11 @@
+.git
+.gitignore
+.vscode
+__pycache__
+*.pyc
+.env
+.venv
+.ipynb_checkpoints
+data
+notebooks
+tests

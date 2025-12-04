@@ -4,7 +4,9 @@ from fastapi import FastAPI, HTTPException, status
 from fastapi.responses import JSONResponse
 
 from api.schemas import PredictionRequest, PredictionResponse
-from api.predict import predict_price
+from api.predict import predict_price  # import relative from api package mounted in container
+
+
 
 app = FastAPI(
     title="Immo Eliza Deployment API",

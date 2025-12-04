@@ -5,7 +5,7 @@ import joblib
 import numpy as np
 import pandas as pd
 
-from api.schemas import PropertyFeatures
+from api.schemas import PropertyFeatures  # treat api/ as python package
 
 # Path to model file
 _MODEL_PATH = Path(__file__).parent / "models" / "immo_eliza_rf_small.joblib"
