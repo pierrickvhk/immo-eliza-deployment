@@ -189,7 +189,8 @@ class PropertyFeatures(BaseModel):
 
 class PredictionRequest(BaseModel):
     data: PropertyFeatures = Field(
-        ..., description="Single property data used for prediction."
+        ...,
+        description="Single property data used for prediction.",
     )
 
 

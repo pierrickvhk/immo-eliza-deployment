@@ -18,4 +18,7 @@ COPY api ./api
 
 # 6) Expose the port and run the FastAPI app
 EXPOSE 8000
-CMD ["uvicorn", "api.app:app", "--host", "0.0.0.0", "--port", "8000"]
+# WHY: Render sets port dynamically, so we respect their binding requirements
+ENV PORT=8000
+CMD ["sh", "-c", "uvicorn api.app:app --host 0.0.0.0 --port $PORT"]
+
